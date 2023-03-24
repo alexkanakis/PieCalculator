@@ -5,11 +5,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+
         double myPi = 4.0;
         double i = 3.0;
 
+
         System.out.println("How many loops do you want?: ");
+
+        Scanner sc = new Scanner(System.in);
+
+        while(!(sc.hasNextInt())){
+            System.out.println("Please give an integer.");
+            sc.next();
+        }
+
         int j = sc.nextInt();
 
         while (i<j*4){
@@ -20,7 +29,6 @@ public class Main {
 
         System.out.println("Actual value of Pi: " + Math.PI);
         System.out.println("You were " + (myPi - Math.PI) + " away from Pi!");
-
 
     }
 }
